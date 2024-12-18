@@ -1,8 +1,6 @@
-import { StackService } from '@/services/stack.service';
+import { StackService, stackService } from '@/services/stack.service';
 
 describe('@tests/services/stack-service', () => {
-  const stackService = new StackService();
-
   afterEach(() => {
     StackService.items = [];
   });
