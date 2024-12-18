@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
-    "module-alias": "^2.2.3"
+    "module-alias": "^2.2.3",
+    "tmg-api-test-uladzislau": "file:",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
