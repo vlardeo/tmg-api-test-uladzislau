@@ -9,11 +9,3 @@ export const SetStoreValueSchema = z.object({
     })
     .strict(),
 });
-
-export const StoreKeyParamSchema = z.object({
-  params: z
-    .object({
-      key: z.string().min(1),
-    })
-    .strict(),
-});

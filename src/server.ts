@@ -8,7 +8,6 @@ export const server = express();
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 
-// Routes
 server.use('/stack', stackRouter);
 server.use('/store', storeRouter);
 

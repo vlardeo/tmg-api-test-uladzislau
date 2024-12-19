@@ -5,5 +5,5 @@ import { validate } from '@/middlewares/schema-validator';
 
 export const stackRouter = Router();
 
-stackRouter.get('/', addStackItem);
-stackRouter.post('/', validate(AddStackItemSchema), getStackItem);
+stackRouter.get('/', getStackItem);
+stackRouter.post('/', validate(AddStackItemSchema), addStackItem);
