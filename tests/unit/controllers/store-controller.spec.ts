@@ -66,12 +66,13 @@ describe('@controllers/store-controller', () => {
     });
 
     describe('when there is no value for the provided key', () => {
-      it('should send response with status code 404 and send message', async () => {
+      it('should send response with status code 404, send message and empty value', async () => {
         await getStoreValue(req, mockResponse, mockNext);
         expect(mockResponse.status).toHaveBeenCalledWith(404);
         expect(mockResponse.send).toHaveBeenCalledTimes(1);
         expect(mockResponse.send).toHaveBeenCalledWith({
           message: `No value found for key '${key}' in the store`,
+          value: null,
         });
       });
     });

@@ -48,9 +48,10 @@ const getStoreValue = (
     const value = storeService.get(key);
 
     if (!value) {
-      res
-        .status(404)
-        .send({ message: `No value found for key '${key}' in the store` });
+      res.status(404).send({
+        message: `No value found for key '${key}' in the store`,
+        value: null,
+      });
     } else {
       res.status(200).send({ value });
     }
